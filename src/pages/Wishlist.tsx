@@ -15,7 +15,7 @@ const Wishlist = () => {
                 {data.wishlistItems.map((item: WishlistItemType) => <WishlistItem data={item}/> )}
             </div>
             <div className="wishlist-item-container">
-                <p className="desc">Or you can donate some of your welth directly to help me reach my goals faster</p>
+                <p className="desc">Or you can donate some of your wealth directly to help me reach my goals faster</p>
                 <p className="card-number">5304960002107222</p>
                 <p className="desc">10q :)</p>
             </div>
