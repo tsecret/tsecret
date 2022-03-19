@@ -9,7 +9,7 @@ const Wishlist = () => {
         <div className="page">
             <span className="page-title">Wishlist</span>
             <div className="alert">You are my friend or just a random stranger looking for a perfect gift for me? Those are the things I'm currently interested in 🙂</div>
-            <div className='flex flex-row auto-cols-auto flex-wrap justify-center'>
+            <div className="withlist-items">
                 {data.wishlistItems.map((item: WishlistItemType, i: number) => <WishlistItem data={item} keyID={i}/> )}
             </div>
             {/* <div className="alert">

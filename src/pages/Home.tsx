@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { useHistory } from 'react-router-dom'
 import { About, Contact, Projects } from '../components';
 
 const Home = () => {
@@ -27,7 +26,7 @@ const Home = () => {
                 break;
             default:
         }
-    }, [window.location.hash])
+    }, [])
 
     return (
         <div className="page">
