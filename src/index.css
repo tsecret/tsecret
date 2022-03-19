@@ -1,2 +1,47 @@
-@import '~antd/dist/antd.css';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    
+    body, #root {
+        @apply w-full min-h-full
+    }
+
+    .page {
+        @apply w-full flex flex-col items-center p-8
+    }
+
+    .page-title {
+        @apply font-bold text-3xl
+    }
+
+    .alert {
+        @apply my-4 max-w-lg
+    }
+
+    .links {
+        @apply flex flex-col md:flex-row
+    }
+
+    .icon { 
+        @apply text-xl p-2 mx-2 px-4
+        sm:text-3xl sm:mx-4 sm:px-4
+        transition-all duration-200
+    }
+
+    .projects {
+        @apply grid grid-cols-1
+        md:grid-cols-2
+        transition-all duration-500
+    }
+
+    .project {
+        @apply card w-[256px] bg-base-100 shadow-xl m-4 cursor-pointer
+        sm:w-96
+        md:w-[256px]
+        lg:w-96
+        hover:-translate-y-2
+        transition-all duration-500
+    }
+}

@@ -1,4 +1,18 @@
-const wishlistItems: any[] = [
+import { Project, WishlistItem } from "../types"
+import { reserved } from "../assets"
+
+const wishlistItems: WishlistItem[] = [
+    {
+        name: "Apple Pro Display XDR",
+        alreadyPurchased: false,
+        timeAdded: 1647645575000,
+        why: "To code in XDR",
+        urls: {
+            image: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/pro-display-hero?wid=820&hei=474&fmt=jpeg&qlt=80&.v=1572384750703",
+            apple: "https://www.apple.com/shop/buy-mac/pro-display-xdr",
+            amazon: "https://www.amazon.com/Apple-32-inch-Pro-Display-Retina/dp/B082M1P2ZQ/ref=sr_1_2?keywords=apple+xdr+pro+display&qid=1647645645&sprefix=apple+xdr%2Caps%2C172&sr=8-2"
+        }
+    },
     {
         name: "Tesla Model X Plaid",
         alreadyPurchased: false,
@@ -22,14 +36,14 @@ const wishlistItems: any[] = [
     },
     {
         name: "Apple AirPods Pro",
-        alreadyPurchased: false,
+        alreadyPurchased: true,
         timeAdded: 1622850873000,
         why: "To watch Dynasty on the plane",
         urls: {
             image: "https://m.media-amazon.com/images/I/71zny7BTRlL._AC_SL1500_.jpg",
             kaspi: "https://kaspi.kz/shop/p/apple-airpods-pro-belyi-4804718/?c=710000000",
             amazon: "https://www.amazon.com/Apple-MWP22AM-A-AirPods-Pro/dp/B07ZPC9QD4/ref=sr_1_3?dchild=1&keywords=airpods+pro&qid=1628014056&sr=8-3"
-        }
+        },
     },
     {
         name: "Paintball gun",
@@ -43,6 +57,38 @@ const wishlistItems: any[] = [
     },
 ]
 
+const projects: Project[] = [
+    {
+        name: "Vault",
+        description: "Password manager. Generate random passwords for different services like Google or Netflix and save them using a keyword",
+        url: "https://github.com/TSecretT/vault",
+        image: "https://repository-images.githubusercontent.com/322893937/2e7b3d92-b091-40cc-8200-813ef11ec2d9",
+        frameworks: ["React", "FastAPI", "Tailwind CSS"]
+    },
+    {
+        name: "Lemon NFT",
+        description: "Free NFT marketplace where people can upload their own picture, video or GIF into NFT and sell or buy with others",
+        image: "https://raw.githubusercontent.com/TSecretT/nft-generator/master/src/assets/NFT.png",
+        url: "https://github.com/TSecretT/nft-generator",
+        frameworks: ["React", "Firebase", "ERC20", "Solidity"]
+    },
+    {
+        name: "Faceit tips",
+        description: "Web tool that parses current match's data and displays the performance, optimal map, and other statistics versus your enemy",
+        url: "https://github.com/TSecretT/faceit-tips",
+        image: "https://github.com/TSecretT/faceit-tips/blob/master/src/assets/FACEITTIPS.png?raw=true",
+        frameworks: ["React", "Faceit API", "Firebase"]
+    },
+    {
+        name: "Got any idea?",
+        description: "Feel free to propose your idea",
+        url: "/#contact",
+        image: reserved,
+        frameworks: ["Python", "NodeJS", "TypeScript", "React", "React Native", "Expo", "Arduino", "RasPi"]
+    },
+]
+
 export default {
-    wishlistItems
+    wishlistItems,
+    projects
 }

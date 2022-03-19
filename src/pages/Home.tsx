@@ -1,42 +1,39 @@
 import React from 'react'
 
-import { GithubOutlined, LinkedinOutlined, MailOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
+import { About, Contact, Projects } from '../components';
 
 const Home = () => {
+    const homeRef = React.useRef()
+    // const workRef = React.useRef()
+    const projectsRef = React.useRef()
+    const contactRef = React.useRef<any>()
 
-    const history: any = useHistory();
+    const executeScroll = (ref: any) => ref.current.scrollIntoView()
 
-    const onRedirect = (site: string) => {
-        switch(site){
-            case "github":
-                return window.open("https://github.com/TSecretT", "_blank");
-            case "linkedin":
-                return window.open("https://www.linkedin.com/in/tsecret/", "_blank");
-            case "email":
-                return window.open("mailto:timichfull@gmail.com", "_blank");
+    React.useEffect(() => {
+        switch (window.location.hash){
+            case "#home":
+                executeScroll(homeRef);
+                break;
+            // case "#work":
+                // executeScroll(workRef);
+                break;
+            case "#projects":
+                executeScroll(projectsRef);
+                break;
+            case "#contact":
+                executeScroll(contactRef);
+                break;
             default:
         }
-    }
+    }, [window.location.hash])
 
     return (
         <div className="page">
-            <span className="tsecret">Timur <strong>TSecret</strong> Sabet</span>
-            <div className="links">
-                <GithubOutlined style={{ color: "black", fontSize: 32, margin: 10, cursor: "pointer" }}
-                    onClick={() => onRedirect("github")}
-                />
-                <LinkedinOutlined style={{ color: "black", fontSize: 32, margin: 10, cursor: "pointer" }}
-                    onClick={() => onRedirect("linkedin")}
-                />
-                <MailOutlined style={{ color: "black", fontSize: 32, margin: 10, cursor: "pointer" }}
-                    onClick={() => onRedirect("email")}
-                />
-            </div>
-
-            <span className="bday-wishlist-button" onClick={() => history.replace('/wishlist')}>
-                My wishlist
-            </span>
+            <About scrollRef={homeRef} />
+            <Projects scrollRef={projectsRef} />
+            <Contact scrollRef={contactRef} />
         </div>
     )
 }
