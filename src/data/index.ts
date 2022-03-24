@@ -81,7 +81,7 @@ const projects: Project[] = [
     },
     {
         name: "SpaceX Edu",
-        description: "Fun based up that for educational purposes",
+        description: "Fun-based app that for educational purposes",
         url: "https://github.com/TSecretT/spacex-edu",
         image: "https://github.com/TSecretT/spacex-edu/blob/main/src/assets/preview.png?raw=true",
         frameworks: ["React", "SpaceX API", "TailwindCSS", "DaisyUI"]
