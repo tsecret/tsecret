@@ -80,6 +80,13 @@ const projects: Project[] = [
         frameworks: ["React", "Faceit API", "Firebase"]
     },
     {
+        name: "SpaceX Edu",
+        description: "Fun based up that for educational purposes",
+        url: "https://github.com/TSecretT/spacex-edu",
+        image: "https://github.com/TSecretT/spacex-edu/blob/main/src/assets/preview.png?raw=true",
+        frameworks: ["React", "SpaceX API", "TailwindCSS", "DaisyUI"]
+    },
+    {
         name: "Got any idea?",
         description: "Feel free to propose your idea",
         url: "/#contact",
