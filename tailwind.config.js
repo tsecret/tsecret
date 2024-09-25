@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {},
+    theme: {
+      fontFamily: {
+        root: ['"Roboto"']
+      }
+    }
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ["dark"],
+  },
 }
